@@ -1,70 +1,24 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
-{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
-{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red255\green255\blue255;\red11\green81\blue160;
-\red38\green38\blue38;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{lower-roman\}.}{\leveltext\leveltemplateid2\'02\'01.;}{\levelnumbers\'01;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\margl1440\margr1440\vieww22200\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\sl512\sa320
+This is the codebook for my Coursera Getting and Cleaning Data course project. This codebook describes the data (including the variables) and all of the work I did with these data.
+From the course website:
+The “data [were] collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
 
-\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 This is the codebook for my Coursera Getting and Cleaning Data course project. This codebook describes the data (including the variables) and all of the work I did with these data.\
-From the course website:\
-\pard\pardeftab720\sl420
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
-\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 The \'93data [were] collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: \
-\
-\pard\pardeftab720\sl420
-{\field{\*\fldinst{HYPERLINK "http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones"}}{\fldrslt \cf4 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones}} \
-\
-Here are the data for the project: \
-\
-\pard\pardeftab720\sl420
-{\field{\*\fldinst{HYPERLINK "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"}}{\fldrslt \cf4 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip}}\'94
-\fs32 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \uc0\u8232 \
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sl512
-\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 The Run_Analysis.R script includes the following steps to tidy up the data and produce a tidy dataset:\
-\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl512
-\ls1\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	i.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Read X_train.txt, y_train.txt and subject_train.txt from the "train" folder and store them in trainX, trainY and trainSubject variables, respectively.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	ii.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Read X_test.txt, y_test.txt and subject_test.txt from the "test" folder and store them in testX, testY and testSubject variables, respectively.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	iii.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Concatenate testX to trainX to create a 10299 by 561 data frame called joinX; \
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	iv.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Concatenate testY to trainY to \cf5 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 create\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2  a 10299 by 1 data frame called joinY; \
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	v.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Concatenate testSubject to trainSubject to \cf5 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 create\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2  a 10299 by 1 data frame called joinSubject.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	vi.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Read the features.txt file and store the data in a variable called features. Extract \cf5 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 only\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2  the measurements on the mean and standard deviation. We end up with a subset of joinX with 66 columns.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	vii.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Clean the column names of the subset by removing the "()" and "-" symbols in the names.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	viii.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Read the activity_labels.txt file and store the data in a variable called activity.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	ix.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Clean the activity names in the second column of activity. We first make all names to lower cases. If the name has an underscore between letters, we remove the underscore and capitalize the letter immediately after the underscore.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	x.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Transform the values of joinY according to the activity data frame.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	xi.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Combine the joinSubject, joinY and joinX by column to get a new clean 10299 by 68 data frame called cleanData. Name the first two columns, "subject" and "activity". The "subject" column contains integers that range from 1 to 30. The "activity" column contains 6 different kinds of activities. The last 66 columns contain measurements.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	xii.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Write the cleanData to "merged_data.txt" file in the working directory.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	xiii.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Then, create a data set with the average of each measurement for each activity and each subject. There are 30 different subjects and 6 unique activities, which can be combined into 180 subject-activity pairs. For each of these, we calculate the mean of each measurement and in the end obtain a 180 by 68 data frame.\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	xiv.	}Finally, \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 write the resulting \cf5 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 180 by 68 data frame\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2  to "data_with_means.txt" file in the working directory.\
-}
+Here are the data for the project: 
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip” 
+	The Run_Analysis.R script includes the following steps to tidy up the data and produce a tidy dataset:
+	A.	Read X_train.txt, y_train.txt and subject_train.txt from the "train" folder and store them in trainX, trainY and trainSubject variables, respectively.
+	B.	Read X_test.txt, y_test.txt and subject_test.txt from the "test" folder and store them in testX, testY and testSubject variables, respectively.
+	C.	Concatenate testX to trainX to create a 10299 by 561 data frame called joinX; 
+	D.	Concatenate testY to trainY to create a 10299 by 1 data frame called joinY; 
+	E.	Concatenate testSubject to trainSubject to create a 10299 by 1 data frame called joinSubject.
+	F.	Read the features.txt file and store the data in a variable called features. Extract only the measurements on the mean and standard deviation. We end up with a subset of joinX with 66 columns.
+	G.	Clean the column names of the subset by removing the "()" and "-" symbols in the names.
+	H.	Read the activity_labels.txt file and store the data in a variable called activity.
+	I.	Clean the activity names in the second column of activity. We first make all names to lower cases. If the name has an underscore between letters, we remove the underscore and capitalize the letter immediately after the underscore.
+	J.	Transform the values of joinY according to the activity data frame.
+	K.	Combine the joinSubject, joinY and joinX by column to get a new clean 10299 by 68 data frame called cleanData. Name the first two columns, "subject" and "activity". The "subject" column contains integers that range from 1 to 30. The "activity" column contains 6 different kinds of activities. The last 66 columns contain measurements.
+	L.	Write the cleanData to "merged_data.txt" file in the working directory.
+	M.	Then, create a data set with the average of each measurement for each activity and each subject. There are 30 different subjects and 6 unique activities, which can be combined into 180 subject-activity pairs. For each of these, we calculate the mean of each measurement and in the end obtain a 180 by 68 data frame.
+	N.	Finally, write the resulting 180 by 68 data frame to "data_with_means.txt" file in the working directory.
